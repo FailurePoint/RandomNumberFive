@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+	<id>io.github.FailurePoint.RandomNumberFive.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>GPL-3.0-or-later</project_license>
+  <name>Random Number Five</name>
+  <summary>Random number generator for integers between 0 and 100</summary>
+	<description>
+	  <p>RandomNumber is a random number generator written in python.</p>
+	  <p>This is was made to trial run the FlatPak publishing system.</p>
+	  <p>It was made in under 20 minutes including the process of drawing the logo and designing the UI.</p>
+	  <p>This is an extremely simple program. do not expect more then the ability to create a random number!</p>
+	  <p>If you find this useful I am very glad!</p>
+	</description>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://qsl.net/kl5is/software/Randomnumber5/photo1.png</image>
+      <caption>The UI is stupid simple...</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://qsl.net/kl5is/software/Randomnumber5/photo2.png</image>
+      <caption>The UI is stupid simple...</caption>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://github.com/FailurePoint/RandomNumberFive</url>
+  <url type="bugtracker">https://github.com/FailurePoint/RandomNumberFive/issues</url>
+  <releases>
+    <release version="0.1.5" date="2023-07-04">
+        <description>
+          <ul>
+            <li>Yay! It's Published!</li>
+          </ul>
+        </description>
+    </release>
+  </releases>
+  <developer_name>FailurePoint</developer_name>
+  <update_contact>FailurePoint@proton.me</update_contact>
+</component>
