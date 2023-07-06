@@ -30,7 +30,8 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/ace/Projects"
+                    "url" : "file:///home/ace/Projects",
+                    "commit" : ""
                 }
             ]
         }
