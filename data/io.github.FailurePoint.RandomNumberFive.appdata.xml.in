@@ -3,6 +3,7 @@
 	<id>io.github.FailurePoint.RandomNumberFive.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
+  <content_rating>https://odrs.gnome.org/oars</content_rating>
   <name>Random Number Five</name>
   <summary>Random number generator for integers between 0 and 100</summary>
 	<description>
