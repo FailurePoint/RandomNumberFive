@@ -48,11 +48,71 @@
               </object>
             </child>
             <child>
+              <object class="GtkLabel">
+                <property name="label">Randomizer range:</property>
+                <property name="margin-end">40</property>
+                <property name="margin-start">40</property>
+                <property name="margin-top">18</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="halign">center</property>
+                <property name="hexpand">true</property>
+                <property name="margin-end">40</property>
+                <property name="margin-start">40</property>
+                <property name="margin-top">5</property>
+                <property name="orientation">horizontal</property>
+                <child>
+                  <object class="GtkSpinButton" id="min_val">
+                    <property name="halign">3</property>
+                    <property name="orientation">0</property>
+                    <property name="wrap">true</property>
+                    <property name="value">0</property>
+                    <property name="climb-rate">1</property>
+                    <property name="margin-top">5</property>
+                    <property name="margin-end">10</property>
+                    <property name="adjustment">
+                      <object class="GtkAdjustment">
+                        <property name="lower">0</property>
+                        <property name="upper">1000</property>
+                        <property name="step-increment">1</property>
+                        <property name="value">0</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSpinButton" id="max_val">
+                    <property name="halign">3</property>
+                    <property name="orientation">0</property>
+                    <property name="wrap">true</property>
+                    <property name="value">100</property>
+                    <property name="climb-rate">1</property>
+                    <property name="margin-top">5</property>
+                    <property name="margin-end">10</property>
+                    <property name="adjustment">
+                      <object class="GtkAdjustment">
+                        <property name="lower">0</property>
+                        <property name="upper">1000</property>
+                        <property name="step-increment">1</property>
+                        <property name="value">100</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+              </object>
+            </child>
+             <child>
               <object class="GtkButton" id="generate">
                 <property name="label">Generate</property>
                 <property name="margin-end">40</property>
                 <property name="margin-start">40</property>
-                <property name="margin-top">15</property>
+                <property name="margin-top">18</property>
+                <style>
+                  <class name="pill"/>
+                  <class name="suggested-action"/>
+                </style>
               </object>
             </child>
             <child>

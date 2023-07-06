@@ -27,6 +27,8 @@ class RandomNumberFiveWindow(Adw.ApplicationWindow):
     output = Gtk.Template.Child()
     hint = Gtk.Template.Child()
     generate = Gtk.Template.Child()
+    min_val = Gtk.Template.Child()
+    max_val = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

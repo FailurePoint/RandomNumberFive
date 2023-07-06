@@ -84,14 +84,22 @@ class RandomNumberFiveApplication(Adw.Application):
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
     def on_create_random(self, widget=None, _=""):
-        final = random.randint(0,100)
-        self.win.output.set_text(f"your number is: {final}!")
         self.win.hint.set_text("")
-        print(final)
+        minv = self.win.min_val.get_value()
+        maxv = self.win.max_val.get_value()
+        print(minv, maxv)
+        random_out = random.randint(minv,maxv)
+        self.win.hint.get_style_context().add_class("title-1")
+        self.win.output.set_text("your number is:")
+        self.win.hint.set_text(f"{random_out}!")
+        print(random_out)
 
     def on_reset(self, widget=None, _=""):
+        self.win.hint.get_style_context().remove_class("title-1")
         self.win.output.set_text("No lucky numbers here yet...")
         self.win.hint.set_text('Try hitting the "generate" button to spin one up!')
+        self.win.min_val.set_value(0)
+        self.win.max_val.set_value(100)
 
 def main(version):
     """The application's entry point."""
