@@ -31,7 +31,7 @@
                 {
                     "type" : "git",
                     "url" : "file:///home/ace/Projects",
-                    "commit" : ""
+                    "commit" : "124b7fd6026f08fd9f59dc5db4f0961ec70d6076"
                 }
             ]
         }
