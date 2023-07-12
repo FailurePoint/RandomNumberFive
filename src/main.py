@@ -59,7 +59,7 @@ class RandomNumberFiveApplication(Adw.Application):
                                 application_name='Random Number Five',
                                 application_icon='io.github.FailurePoint.RandomNumberFive',
                                 developer_name='FailurePoint',
-                                version='0.1.0',
+                                version='1.1.5',
                                 developers=['FailurePoint'],
                                 copyright='© 2023 FailurePoint')
         about.present()

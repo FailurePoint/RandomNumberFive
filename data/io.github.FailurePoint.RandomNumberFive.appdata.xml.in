@@ -3,17 +3,11 @@
 	<id>io.github.FailurePoint.RandomNumberFive.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
-  <content_rating>
-    <type>https://odrs.gnome.org/oars</type>
-  </content_rating>
+  <content_rating type="https://odrs.gnome.org/oars"/>
   <name>Random Number Five</name>
-  <summary>Random number generator for integers between 0 and 100</summary>
+  <summary>Random number generator for For the Linux desktop!</summary>
 	<description>
-	  <p>RandomNumber is a random number generator written in python.</p>
-	  <p>This is was made to trial run the FlatPak publishing system.</p>
-	  <p>It was made in under 20 minutes including the process of drawing the logo and designing the UI.</p>
-	  <p>This is an extremely simple program. do not expect more then the ability to create a random number!</p>
-	  <p>If you find this useful I am very glad!</p>
+	  <p>Random Number Five is a random number generator written in Python and GTK capable of creating randomly generated numbers between a configurable min/max range from 0 to 1000.</p>
 	</description>
   <screenshots>
     <screenshot type="default">
@@ -28,12 +22,19 @@
   <url type="homepage">https://github.com/FailurePoint/RandomNumberFive</url>
   <url type="bugtracker">https://github.com/FailurePoint/RandomNumberFive/issues</url>
   <releases>
-    <release version="0.1.5" date="2023-07-04">
-        <description>
-          <ul>
-            <li>Yay! It's Published!</li>
-          </ul>
-        </description>
+   <release version="1.1.5" date="2023-6-11">
+      <description>
+        <ul>
+          <li>Added "Randomizer range" functionality.</li>
+        </ul>
+      </description>
+  </release>
+  <release version="0.1.5" date="2023-6-3">
+      <description>
+        <ul>
+          <li>Yay! It's Published!</li>
+        </ul>
+      </description>
     </release>
   </releases>
   <developer_name>FailurePoint</developer_name>

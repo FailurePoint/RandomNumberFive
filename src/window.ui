@@ -71,7 +71,8 @@
                     <property name="value">0</property>
                     <property name="climb-rate">1</property>
                     <property name="margin-top">5</property>
-                    <property name="margin-end">10</property>
+                    <property name="margin-bottom">5</property>
+                    <property name="margin-start">10</property>
                     <property name="adjustment">
                       <object class="GtkAdjustment">
                         <property name="lower">0</property>
@@ -83,6 +84,11 @@
                   </object>
                 </child>
                 <child>
+                  <object class="GtkLabel">
+                    <property name="label">  :  </property>
+                  </object>
+                </child>
+                <child>
                   <object class="GtkSpinButton" id="max_val">
                     <property name="halign">3</property>
                     <property name="orientation">0</property>
@@ -90,6 +96,7 @@
                     <property name="value">100</property>
                     <property name="climb-rate">1</property>
                     <property name="margin-top">5</property>
+                    <property name="margin-bottom">5</property>
                     <property name="margin-end">10</property>
                     <property name="adjustment">
                       <object class="GtkAdjustment">
