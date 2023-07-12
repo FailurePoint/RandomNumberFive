@@ -61,7 +61,10 @@ class RandomNumberFiveApplication(Adw.Application):
                                 developer_name='FailurePoint',
                                 version='1.1.5',
                                 developers=['FailurePoint'],
-                                copyright='© 2023 FailurePoint')
+                                copyright='© 2023 FailurePoint',
+                                website='https://github.com/FailurePoint/RandomNumberFive',
+                                comments='Random number generator for For the Linux desktop!',
+                                license_type=Gtk.License.GPL_3_0)
         about.present()
 
     def on_preferences_action(self, widget, _):
