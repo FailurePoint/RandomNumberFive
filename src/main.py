@@ -26,6 +26,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
 from .window import RandomNumberFiveWindow
+from .metadata import Vstatic, debug
 
 
 class RandomNumberFiveApplication(Adw.Application):
@@ -34,11 +35,13 @@ class RandomNumberFiveApplication(Adw.Application):
     def __init__(self):
         super().__init__(application_id='io.github.FailurePoint.RandomNumberFive',
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
+        debug.report("*********internal action connections************", line_prompt=False)
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
-        self.create_action('preferences', self.on_preferences_action)
         self.create_action('new_random', self.on_create_random, ['<primary>r'])
         self.create_action('reset', self.on_reset, ['<primary><shift>r'])
+        debug.report("*************************************************", line_prompt=False)
+        debug.newline()
 
 
     def do_activate(self):
@@ -48,28 +51,34 @@ class RandomNumberFiveApplication(Adw.Application):
         necessary.
         """
         self.win = self.props.active_window
+        debug.report("checking for application window...")
         if not self.win:
+            debug.report("window has not been raised yet, raising now.")
             self.win = RandomNumberFiveWindow(application=self)
+        else:
+            debug.report("application window already running!")
+        debug.report("presenting window...")
+        debug.newline()
         self.win.present()
         self.win.generate.connect("clicked", self.on_create_random)
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
+        debug.report("about window requested, presenting...")
         about = Adw.AboutWindow(transient_for=self.props.active_window,
                                 application_name='Random Number Five',
                                 application_icon='io.github.FailurePoint.RandomNumberFive',
                                 developer_name='FailurePoint',
-                                version='1.1.5',
+                                version=Vstatic.version(),
                                 developers=['FailurePoint'],
                                 copyright='© 2023 FailurePoint',
                                 website='https://github.com/FailurePoint/RandomNumberFive',
-                                comments='Random number generator for For the Linux desktop!',
+                                comments='Random number generator for For the Linux desktop!\n\n Bug Report contact: FailurePoint@proton.me',
+                                debug_info=debug.get_log(),
+                                release_notes=Vstatic.releasenotes(),
                                 license_type=Gtk.License.GPL_3_0)
         about.present()
 
-    def on_preferences_action(self, widget, _):
-        """Callback for the app.preferences action."""
-        print('app.preferences action activated')
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.
@@ -85,19 +94,27 @@ class RandomNumberFiveApplication(Adw.Application):
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
+        debug.report(f'registered action {name}. shortcut = {str(shortcuts)}')
 
     def on_create_random(self, widget=None, _=""):
+        if _ is None:
+            debug.report("create random called from shortcut")
+        else:
+            debug.report("create random called from UI")
+        debug.report("creating random number...")
         self.win.hint.set_text("")
         minv = self.win.min_val.get_value()
         maxv = self.win.max_val.get_value()
-        print(minv, maxv)
+        debug.report(f"randomizer range set: {minv} - {maxv} ")
         random_out = random.randint(minv,maxv)
         self.win.hint.get_style_context().add_class("title-1")
         self.win.output.set_text("your number is:")
         self.win.hint.set_text(f"{random_out}!")
-        print(random_out)
+        debug.report(f"Number created: {random_out}")
+        debug.newline()
 
     def on_reset(self, widget=None, _=""):
+        debug.report("UI Reset requested, resetting...")
         self.win.hint.get_style_context().remove_class("title-1")
         self.win.output.set_text("No lucky numbers here yet...")
         self.win.hint.set_text('Try hitting the "generate" button to spin one up!')

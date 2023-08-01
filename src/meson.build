@@ -30,6 +30,7 @@ random_number_five_sources = [
   '__init__.py',
   'main.py',
   'window.py',
+  'metadata.py',
 ]
 
 install_data(random_number_five_sources, install_dir: moduledir)

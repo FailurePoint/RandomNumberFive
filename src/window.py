@@ -19,6 +19,7 @@
 
 from gi.repository import Adw
 from gi.repository import Gtk
+from .metadata import debug
 
 @Gtk.Template(resource_path='/io/github/FailurePoint/RandomNumberFive/window.ui')
 class RandomNumberFiveWindow(Adw.ApplicationWindow):
@@ -31,4 +32,5 @@ class RandomNumberFiveWindow(Adw.ApplicationWindow):
     max_val = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
+        debug.report("loading template XML for UI from window.ui")
         super().__init__(**kwargs)

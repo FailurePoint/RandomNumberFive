@@ -11,25 +11,45 @@
 	</description>
   <screenshots>
     <screenshot type="default">
-      <image>https://qsl.net/kl5is/software/Randomnumber5/photo1.png</image>
+      <image>https://qsl.net/kl5is/software/Randomnumber5/rnfUI2-photo1.png</image>
       <caption>The UI is stupid simple...</caption>
     </screenshot>
     <screenshot type="default">
-      <image>https://qsl.net/kl5is/software/Randomnumber5/photo2.png</image>
-      <caption>The UI is stupid simple...</caption>
+      <image>https://qsl.net/kl5is/software/Randomnumber5/rnfUI2-photo2.png</image>
+      <caption>Not much to see...</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://qsl.net/kl5is/software/Randomnumber5/rnfUI2-photo3.png</image>
+      <caption>The about window took more time to make then the rest of the UI...</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://qsl.net/kl5is/software/Randomnumber5/rnfUI2-photo4.png</image>
+      <caption>It does the job it was made for well at least...</caption>
     </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/FailurePoint/RandomNumberFive</url>
   <url type="bugtracker">https://github.com/FailurePoint/RandomNumberFive/issues</url>
   <releases>
-   <release version="1.1.5" date="2023-6-11">
+   <release version="1.2.0" date="2023-08-01">
+      <description>
+        <ul>
+            <li>Added embedded self session logging for new debug report option in about window</li>
+            <li>Improved the About window</li>
+            <li>Added contact information for bug reporting</li>
+            <li>Code clean up</li>
+            <li>Fixed 3 minor bugs</li>
+            <li>First stable release!</li>
+        </ul>
+      </description>
+   </release>
+   <release version="1.1.5" date="2023-06-11">
       <description>
         <ul>
           <li>Added "Randomizer range" functionality.</li>
         </ul>
       </description>
   </release>
-  <release version="0.1.5" date="2023-6-3">
+  <release version="0.1.5" date="2023-06-03">
       <description>
         <ul>
           <li>Yay! It's Published!</li>
