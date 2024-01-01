@@ -43,6 +43,8 @@ class RandomNumberFiveApplication(Adw.Application):
         debug.report("*************************************************", line_prompt=False)
         debug.newline()
 
+        self.persistant = Gio.Settings.new("io.github.FailurePoint.RandomNumberFive")
+
 
     def do_activate(self):
         """Called when the application is activated.
@@ -105,13 +107,47 @@ class RandomNumberFiveApplication(Adw.Application):
         self.win.hint.set_text("")
         minv = self.win.min_val.get_value()
         maxv = self.win.max_val.get_value()
-        debug.report(f"randomizer range set: {minv} - {maxv} ")
-        random_out = random.randint(minv,maxv)
-        self.win.hint.get_style_context().add_class("title-1")
-        self.win.output.set_text("your number is:")
-        self.win.hint.set_text(f"{random_out}!")
-        debug.report(f"Number created: {random_out}")
-        debug.newline()
+        if minv == maxv:
+            already_found = self.persistant.get_int("easter-egg")
+            self.win.hint.get_style_context().add_class("title-1")
+            self.win.hint.set_text("")
+            if already_found == 1:
+                self.win.output.set_text("That's not very nice...")
+            elif already_found == 2:
+                self.win.output.set_text("I can't do decimals ya' know...")
+            elif already_found == 3:
+                self.win.output.set_text("Why??")
+            elif already_found == 4:
+                self.win.output.set_text("I AM NOT doing that...")
+            elif already_found == 5:
+                self.win.output.set_text("-_-")
+            elif already_found == 6:
+                self.win.output.set_text("Stop pushing that button!")
+            elif already_found == 7:
+                self.win.output.set_text("I am warning you!")
+            elif already_found == 8:
+                self.win.output.set_text("Please stop?")
+            elif already_found == 9:
+                self.win.output.set_text("Pretty please??")
+            elif already_found == 10:
+                self.win.output.set_text("Uhg. Fine, your number is:")
+                random_out = random.randint(minv,maxv)
+                self.win.hint.set_text(f"{random_out}... Go figure! -_-")
+                debug.report(f"Number created: {random_out}")
+                debug.newline()
+            else:
+                self.persistant.set_int("easter-egg", 0)
+                self.win.output.set_text("You already found this one... :)")
+            if self.persistant.get_int("easter-egg") == already_found:
+                self.persistant.set_int("easter-egg", already_found + 1)
+        else:
+            debug.report(f"randomizer range set: {minv} - {maxv} ")
+            random_out = random.randint(minv,maxv)
+            self.win.hint.get_style_context().add_class("title-1")
+            self.win.output.set_text("your number is:")
+            self.win.hint.set_text(f"{random_out}!")
+            debug.report(f"Number created: {random_out}")
+            debug.newline()
 
     def on_reset(self, widget=None, _=""):
         debug.report("UI Reset requested, resetting...")

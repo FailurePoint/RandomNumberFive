@@ -5,17 +5,17 @@ from datetime import datetime
 class Vstatic():
 
     def version():
-        return "1.2.0"
+        return "1.2.1"
 
     def releasenotes():
           release_notes = f"""
             <ul>
-                <li>Added embedded self session logging for new debug report option in about window</li>
-                <li>Improved the About window</li>
-                <li>Added contact information for bug reporting</li>
-                <li>Code clean up</li>
-                <li>Fixed 3 minor bugs</li>
-                <li>First stable release!</li>
+                <li>Ranger expansion to 1,000,000</li>
+                <li>Added Easter egg. Can you find it?</li>
+                <li>Added Reset button</li>
+                <li>Code documentation</li>
+                <li>0/0 Known bugs squashed!</li>
+                <li>Happy new-year everyone! :)</li>
             </ul>
             """
           return release_notes
@@ -40,7 +40,7 @@ class debug():
 [==================================]\n
 Version: {Vstatic.version()}
 Flatpak: True
-UI version: 2
+UI version: 2.1
 Internal status: {Vstatic.internal_release_status()}"""
         final_report = debug_static + f"\n\n[==================================]\n\nRun Log from {datetime.utcnow()}:\n\n" + debug.read()
         print(final_report)

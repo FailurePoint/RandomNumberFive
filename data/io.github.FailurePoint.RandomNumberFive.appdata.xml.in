@@ -7,7 +7,10 @@
   <name>Random Number Five</name>
   <summary>Random number generator for For the Linux desktop!</summary>
 	<description>
-	  <p>Random Number Five is a random number generator written in Python and GTK capable of creating randomly generated numbers between a configurable min/max range from 0 to 1000.</p>
+	  <a href="https://stopthemingmy.app">
+    <img width="180" alt="Please Don't Theme" src="https://stopthemingmy.app/badge.svg"/>
+    </a>
+	  <p>Random Number Five is a random number generator for creating randomly generated numbers between a configurable min/max range from 0 to 1,000,000.</p>
 	</description>
   <screenshots>
     <screenshot type="default">
@@ -29,9 +32,19 @@
   </screenshots>
   <url type="homepage">https://github.com/FailurePoint/RandomNumberFive</url>
   <url type="bugtracker">https://github.com/FailurePoint/RandomNumberFive/issues</url>
-  <project_group>GNOME</project_group>
-  <developer_name>FailurePoint</developer_name>
   <releases>
+  <release version="1.2.1" date="2023-12-31">
+      <description>
+        <ul>
+            <li>Ranger expansion to 1,000,000</li>
+            <li>Added Easter egg. Can you find it?</li>
+            <li>Added Reset button</li>
+            <li>Code documentation</li>
+            <li>0/0 Known bugs squashed!</li>
+            <li>Happy new-year everyone! :)</li>
+        </ul>
+      </description>
+   </release>
    <release version="1.2.0" date="2023-08-01">
       <description>
         <ul>

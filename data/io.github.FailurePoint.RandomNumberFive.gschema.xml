@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="random-number-five">
 	<schema id="io.github.FailurePoint.RandomNumberFive" path="/io/github/FailurePoint/RandomNumberFive/">
+	   <key name="easter-egg" type="i">
+			<default>1</default>
+			<summary>Easter egg</summary>
+			<description>It's a surprise! ;)</description>
+		</key>
 	</schema>
 </schemalist>
