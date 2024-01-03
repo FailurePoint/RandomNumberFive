@@ -3,23 +3,23 @@
   <requires lib="gtk" version="4.0"/>
   <requires lib="Adw" version="1.0"/>
   <template class="RandomNumberFiveWindow" parent="AdwApplicationWindow">
-    <property name="title">Random Number Five</property>
     <property name="default-width">600</property>
     <property name="default-height">300</property>
-    <child>
-      <object class="GtkBox">
-        <property name="orientation">vertical</property>
-        <child>
-          <object class="GtkHeaderBar" id="header_bar">
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar" id="header_bar">
             <child type="end">
               <object class="GtkMenuButton">
+                <property name="primary">True</property>
                 <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Menu</property>
                 <property name="menu-model">primary_menu</property>
               </object>
             </child>
           </object>
         </child>
-        <child>
+        <property name="content">
           <object class="GtkBox">
             <property name="vexpand">true</property>
             <property name="hexpand">true</property>
@@ -128,9 +128,9 @@
               </object>
             </child>
           </object>
-        </child>
+        </property>
       </object>
-    </child>
+    </property>
   </template>
   <menu id="primary_menu">
     <section>
