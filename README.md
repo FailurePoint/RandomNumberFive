@@ -10,6 +10,6 @@
 UI that takes advanage of the power of GTK4 and the Gnome framework.<p>
 
 
-You should be able to install it from flatpak with ```flatpak install flathub io.github.FailurePoint.RandomNumberFive```
+You should be able to install it from flatpak with 'flatpak install flathub io.github.FailurePoint.RandomNumberFive'
 
 <p> or if you rather build it your self with GNOME Builder you can go to: `Open Project>Clone Repository` and in "Repository URL"  type ```https://github.com/FalurePoint/RandomNumber5``` and hit clone.

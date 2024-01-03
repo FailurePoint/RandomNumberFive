@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-	<id>io.github.FailurePoint.RandomNumberFive.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
+  <id>io.github.FailurePoint.RandomNumberFive.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
   <content_rating type="https://odrs.gnome.org/oars"/>
   <name>Random Number Five</name>
   <summary>Random number generator for For the Linux desktop!</summary>
-	<description>
-	  <a href="https://stopthemingmy.app">
-    <img width="180" alt="Please Don't Theme" src="https://stopthemingmy.app/badge.svg"/>
-    </a>
-	  <p>Random Number Five is a random number generator for creating randomly generated numbers between a configurable min/max range from 0 to 1,000,000.</p>
-	</description>
+  <description>
+    <p>Random Number Five is a random number generator for creating randomly generated numbers between a configurable min/max range from 0 to 1,000,000.</p>
+  </description>
   <screenshots>
     <screenshot type="default">
       <image>https://qsl.net/kl5is/software/Randomnumber5/rnfUI2-photo1.png</image>
